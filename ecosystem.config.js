@@ -29,9 +29,13 @@ module.exports = {
       host: '47.100.100.186',
       ref: 'origin/master',
       repo: 'git@github.com:tomsteven11/myblog.git',
-      path: '/var/www/production',
+      path: '/usr/local/myProject',
+      ssh_options: "StrictHostKeyChecking=no",
       'pre-deploy-local': '',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
+      "env": {
+        "NODE_ENV": "production"
+      },
       'pre-setup': ''
     }
   }
