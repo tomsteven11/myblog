@@ -28,8 +28,8 @@ module.exports = {
       user: 'root',
       host: '47.100.100.186',
       ref: 'origin/master',
-      repo: 'GIT_REPOSITORY',
-      path: 'DESTINATION_PATH',
+      repo: 'git@github.com:tomsteven11/myblog.git',
+      path: '/var/www/production',
       'pre-deploy-local': '',
       'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
